@@ -46,7 +46,7 @@ class Database implements DriverContract
             $value = $setting->value;
 
             $decoded = json_decode($value, 1, 512);
-            if (is_object($decoded)) {
+            if (is_array($decoded)) {
                 $value = $decoded;
             }
 
